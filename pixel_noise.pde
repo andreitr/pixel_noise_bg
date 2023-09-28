@@ -1,11 +1,11 @@
-int numImages = 5;
+int numImages = 20;
 int counter = 0;
 int canvasSize = 48;
 int pixelSize = 1;
 
-int dark = 30;
-int light = 60;
-int white = 30;
+int dark = 220;
+int light = 110;
+int white = 40;
 int tetris = 47;
 
 void setup() {
@@ -20,28 +20,28 @@ void draw() {
 
   background(218, 242, 218);
   fill(130, 144, 130);
-  rect(14, 42, 20, 1);
+  rect(14, 41, 20, 1);
 
-  //for (int i = 0; i < white; i++) {
-  //  int x = int(random(0, canvasSize));
-  //  int y = int(random(0, canvasSize));
-  //  fill(255, 255, 255, calculateOpacity(x, y));
-  //  rect(x, y, pixelSize, pixelSize);
-  //}
+  for (int i = 0; i < white; i++) {
+    int x = int(random(0, canvasSize));
+    int y = int(random(0, canvasSize));
+    fill(255, 255, 255, calculateOpacity(x, y));
+    rect(x, y, pixelSize, pixelSize);
+  }
 
-  //for (int i = 0; i < light; i++) {
-  //  int x = round(random(0, canvasSize));
-  //  int y = round(random(0, canvasSize));
-  //  fill(229, 255, 229, calculateOpacity(x, y));
-  //  rect(x, y, pixelSize, pixelSize);
-  //}
+  for (int i = 0; i < light; i++) {
+    int x = round(random(0, canvasSize));
+    int y = round(random(0, canvasSize));
+    fill(229, 255, 229, calculateOpacity(x, y));
+    rect(x, y, pixelSize, pixelSize);
+  }
 
-  //for (int i = 0; i < dark; i++) {
-  //  int x = round(random(0, canvasSize));
-  //  int y = round(random(0, canvasSize));
-  //  fill(195, 217, 195, calculateOpacity(x, y));
-  //  rect(x, y, pixelSize, pixelSize);
-  //}
+  for (int i = 0; i < dark; i++) {
+    int x = round(random(0, canvasSize));
+    int y = round(random(0, canvasSize));
+    fill(195, 217, 195, calculateOpacity(x, y));
+    rect(x, y, pixelSize, pixelSize);
+  }
 
   //for (int i = 0; i < tetris; i++) {
   //  int x = round(random(0, canvasSize));
@@ -51,7 +51,7 @@ void draw() {
   //}
 
 
-  save("bg_tetris_4.png");
+  save("pixe_noise_"+counter+".png");
   counter++;
 
   if (counter < numImages) {
